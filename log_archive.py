@@ -16,7 +16,7 @@ except KeyError:
 
 def files_generator():
     for file in os.listdir(work_dir):
-        if file.endswith(".log.1"):
+        if file.endswith(".log"):
             proc = subprocess.Popen(
                 f"sudo -S chmod 666 {work_dir}/{file}".split(),
                 stdin=subprocess.PIPE,
